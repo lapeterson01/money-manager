@@ -5,6 +5,7 @@ import Header from './Header';
 import Home from './Home';
 import Account from './Account';
 import Bills from './Bills';
+import Budget from './Budget';
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route exact path="/account/:accountNumber" component={Account} />
               <Route exact path="/bills/:billNumber" component={Bills} />
+              <Route exact path="/budget/:budgetNumber" component={Budget} />
             </div>
           </div>
         </BrowserRouter>

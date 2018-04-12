@@ -3,6 +3,10 @@ import React from 'react';
 const Bills = () => {
     return (
         <div>
+            <div className="row justify-content-end">
+                <a href="/budget/123">My Budget</a>
+            </div>
+            <hr />
             <h1 className="text-center">Bills</h1>
             <div className="row" style={{width:"75%", marginLeft:"auto", marginRight:"auto"}}>
                 <table>
