@@ -6,7 +6,7 @@ const Home = () => {
             <h1>Welcome to Money Manager</h1>
             <hr />
             <p className="lead">
-                <a href="/account/123" className="btn btn-lg btn-primary">Account</a>
+                <a href="/account/123" className="btn btn-lg btn-primary">My Account</a>
             </p>
         </div>
     )

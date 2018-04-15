@@ -6,6 +6,7 @@ import Home from './Home';
 import Account from './Account';
 import Bills from './Bills';
 import Budget from './Budget';
+import Plaid from './Plaid';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
               <Route exact path="/account/:accountNumber" component={Account} />
               <Route exact path="/bills/:billNumber" component={Bills} />
               <Route exact path="/budget/:budgetNumber" component={Budget} />
+              <Route exact path="/plaid" component={Plaid} />
             </div>
           </div>
         </BrowserRouter>
