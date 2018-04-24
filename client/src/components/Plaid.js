@@ -1,28 +1,26 @@
 import React, { Component } from 'react';
-import 'react-native-plaid-link';
+import PlaidLink from 'react-plaid-link';
 
 class Plaid extends Component {
-    constructor(props) {
-        super(props)
+    handleOnSuccess(token, metadata) {
+        // send token to client server
+        console.log(token);
+    }
 
-        this.state = {
-            data: null
-        }
+    handleOnExit() {
+        // handle the case when your user exits Link
     }
 
     render() {
-        return <PlaidAuthenticator
-            onMessage={this.onMessage}
-            publicKey="bfc63562712f9829c4f8139ed9e252"
+        return <PlaidLink
+            clientName="Money Manager"
             env="development"
-            product="auth,transactions"
-            clientName="Logan Peterson"
-        />
-    }
-
-    onMessage = (data) => {
-        this.setState({data})
-        console.log(data);
+            product={["auth", "transactions"]}
+            publicKey="bfc63562712f9829c4f8139ed9e252"
+            onExit={this.handleOnExit}
+            onSuccess={this.handleOnSuccess}>
+            Open Link and connect your bank!
+        </PlaidLink>
     }
 }
 
